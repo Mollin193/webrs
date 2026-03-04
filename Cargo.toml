@@ -3,4 +3,34 @@ name = "webrs"
 version = "0.1.0"
 edition = "2024"
 
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+debug = false
+panic = "abort"
+
 [dependencies]
+tokio = { version = "1.50.0", features = ["full"] }
+
+# 错误处理
+anyhow = "1.0.102"
+thiserror = "2.0.18"
+
+# web服务
+axum = { version = "0.8.8", features = ["macros"] }
+tower-http = { version = "0.6.4", features = ["trace", "timeout", "limit", "cors", "normalize-path", "auth", "compression-full"] }
+
+# 数据库
+sea-orm = { version = "1.1.19", features = ["with-chrono", "debug-print", "sqlx-postgres", "with-rust_decimal", "runtime-tokio"] }
+idgenerator = "2.0.0"
+
+# 日志
+tracing = { version = "0.1.41", features = ["async-await"] }
+tracing-subscriber = { version = "0.3.19", features = ["env-filter", "chrono"] }
+
+# 配置项
+num_cpus = "1.17.0"
+bytesize = "2.3.1"
+xid = "1.1.1"
