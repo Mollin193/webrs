@@ -34,3 +34,5 @@ tracing-subscriber = { version = "0.3.19", features = ["env-filter", "chrono"] }
 num_cpus = "1.17.0"
 bytesize = "2.3.1"
 xid = "1.1.1"
+serde = { version = "1.0.228", features = ["derive"] }
+config = { version = "0.15.19", features = ["yaml"] }
