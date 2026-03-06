@@ -6,5 +6,5 @@ mod web;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    app::run(api::create_router).await
+    app::run(api::create_router()).await
 }

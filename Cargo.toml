@@ -36,3 +36,7 @@ bytesize = "2.3.1"
 xid = "1.1.1"
 serde = { version = "1.0.228", features = ["derive"] }
 config = { version = "0.15.19", features = ["yaml"] }
+bcrypt = "0.19.0"
+jsonwebtoken = "10.3.0"
+axum-valid = { version = "0.24.0", features = ["full_validator"] }
+validator = "0.20.0"
