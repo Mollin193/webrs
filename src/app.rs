@@ -11,6 +11,7 @@ mod latency;
 mod logger;
 pub mod path;
 pub mod response;
+pub mod serde;
 mod server;
 
 #[derive(Clone)]
