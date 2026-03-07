@@ -7,6 +7,8 @@ use axum_valid::ValidRejection;
 
 use crate::app::response::ApiResponse;
 
+pub type ApiResult<T> = Result<T, ApiError>;
+
 #[derive(Debug, thiserror::Error)]
 pub enum ApiError {
     #[error("服务器迷路了")]

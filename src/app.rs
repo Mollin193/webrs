@@ -2,17 +2,24 @@ use crate::config;
 use axum::Router;
 use sea_orm::DatabaseConnection;
 
+pub mod auth;
 pub mod common;
 mod database;
 pub mod enumeration;
 pub mod error;
 pub mod id;
+pub mod json;
 mod latency;
 mod logger;
+pub mod middleware;
 pub mod path;
+pub mod query;
 pub mod response;
 pub mod serde;
 mod server;
+pub mod utils;
+pub mod valid;
+pub mod validation;
 
 #[derive(Clone)]
 pub struct AppState {

@@ -3965,6 +3965,7 @@ dependencies = [
  "idgenerator",
  "jsonwebtoken",
  "num_cpus",
+ "regex",
  "sea-orm",
  "serde",
  "thiserror 2.0.18",
