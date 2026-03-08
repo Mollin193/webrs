@@ -41,3 +41,4 @@ jsonwebtoken = "10.3.0"
 axum-valid = { version = "0.24.0", features = ["full_validator"] }
 validator = { version = "0.20.0", features = ["derive"] }
 regex = "1.12.3"
+rust-embed = { version = "8.7.2", features = ["axum", "axum-ex", "tokio", "compression", "debug-embed", "include-exclude", "include-flate", "interpolate-folder-path", "mime-guess"] }
