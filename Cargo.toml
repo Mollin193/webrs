@@ -18,27 +18,33 @@ tokio = { version = "1.50.0", features = ["full"] }
 anyhow = "1.0.102"
 thiserror = "2.0.18"
 
-# web服务
+# Web 框架与网络
 axum = { version = "0.8.8", features = ["macros"] }
 tower-http = { version = "0.6.4", features = ["trace", "timeout", "limit", "cors", "normalize-path", "auth", "compression-full"] }
 
 # 数据库
 sea-orm = { version = "1.1.19", features = ["with-chrono", "debug-print", "sqlx-postgres", "with-rust_decimal", "runtime-tokio"] }
-idgenerator = "2.0.0"
 
 # 日志
 tracing = { version = "0.1.41", features = ["async-await"] }
 tracing-subscriber = { version = "0.3.19", features = ["env-filter", "chrono"] }
 
-# 配置项
+# 系统工具与辅助库
 num_cpus = "1.17.0"
 bytesize = "2.3.1"
 xid = "1.1.1"
+idgenerator = "2.0.0"
+
+# 数据解析、配置与静态资源
 serde = { version = "1.0.228", features = ["derive"] }
-config = { version = "0.15.19", features = ["yaml"] }
-bcrypt = "0.19.0"
-jsonwebtoken = "10.3.0"
-axum-valid = { version = "0.24.0", features = ["full_validator"] }
-validator = { version = "0.20.0", features = ["derive"] }
-regex = "1.12.3"
+config = { version = "0.15.19", features = ["toml"] }
 rust-embed = { version = "8.7.2", features = ["axum", "axum-ex", "tokio", "compression", "debug-embed", "include-exclude", "include-flate", "interpolate-folder-path", "mime-guess"] }
+
+# 认证与安全
+bcrypt = "0.19.0"
+jsonwebtoken = "9.3.1"
+
+# 数据验证
+validator = { version = "0.20.0", features = ["derive"] }
+axum-valid = { version = "0.24.0", features = ["full_validator"] }
+regex = "1.12.3"

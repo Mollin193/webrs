@@ -25,8 +25,8 @@ impl AppConfig {
         Config::builder()
             // 读配置文件
             .add_source(
-                config::File::with_name("application")
-                    .format(FileFormat::Yaml)
+                config::File::with_name("config")
+                    .format(FileFormat::Toml)
                     .required(true),
             )
             // 读环境变量

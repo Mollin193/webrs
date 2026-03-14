@@ -26,7 +26,7 @@ impl Server {
         let router = self.build_router(state, router);
         let port = self.config.port();
 
-        let listener = TcpListener::bind(format!("http://0.0.0.0:{}", port)).await?;
+        let listener = TcpListener::bind(format!("0.0.0.0:{}", port)).await?;
         tracing::info!("Listening on {}", listener.local_addr()?);
 
         axum::serve(
